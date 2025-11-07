@@ -31,7 +31,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production! (False - перед выпуском)
 DEBUG = True 
 # ['*']
-ALLOWED_HOSTS = ['https://arodmagicmachine.vercel.app/'] # https://ivri.me/
+ALLOWED_HOSTS = ['arodmagicmachine.vercel.app'] # https://ivri.me/
 
 
 # Application definition
