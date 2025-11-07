@@ -1,0 +1,128 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+    
+
+  <div class="arial-text">
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+
+
+
+    <a href="{% url 'oz_book_17' %}"><<</a>
+    
+    <a href="{% url 'oz_book_17' %}">17</a>
+    <a href="{% url 'oz_book_16' %}" class="active_butt_pag">16</a>
+    <a href="{% url 'oz_book_15' %}">15</a>
+
+    <a href="{% url 'oz_book_1' %}">>></a>
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+
+
+    <div class="center">  
+
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_16-8zY9DBlSxpzncN9s2iv0gR98xXTm1F.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+
+</div>
+
+  
+
+<div class="right" dir="rtl">
+  
+  "איך אני יכולה לחזור לאמריקה?" שאלה דורותי. הקוסם <b>חִייֵּךְ</b>. "ה<b>יְכוֹלֶת</b> הייתה אצלך כל הזמן. נעלי הכסף הקסומות שלך יכולות לקחת אותך לכל מקום שתרצי!"
+  דורותי הסתכלה ב<b>עָצָב</b> על <b><font color="#004aad">חֲבֵרֶיהָ</font></b>. "יהיה <b>נֶהְדָּר</b> לחזור הביתה, אבל <b>אֶתְגַּעְגֵּעַ</b> אליכם מאוד," היא <b>נִישְּׁקָה</b> את כולם לשלום.
+  
+  <br><br>
+
+  <div class="audio_google_file">
+
+
+    <audio src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/audio/Voiceover_Oz_16-D8UP6wbCasMiwmogfXYucH8w5ZZHct.m4a" id="audio" controls controlsList="nodownload"> 
+    </audio>
+    
+    </div>
+
+  <div class="right">
+
+    <div class="book_dictionary">
+
+
+  <p><b>לְחַיֵּיךְ</b> – улыбаться</p>
+  <p><b>יְכוֹלֶת</b> – способность, возможность</p>
+  <p><b>נֶהְדָּר</b> – великолепно, превосходно</p>
+  <br>
+  <p><b>לְנַשֵּׁק</b> – поцеловать</p>
+  <p><b>עָצָב</b> – печаль</p>
+  <p><b>לְהִתְגַּעְגֵּעַ</b> – скучать</p>
+  </div>
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+   
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+
+</div></p>
+
+</div>  
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 

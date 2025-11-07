@@ -1,0 +1,100 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+
+
+
+
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+
+  <div class="arial-text">
+  <div class="pagination"> 
+  
+
+  <a href="{% url 'oz_book_17' %}"><<</a>
+
+
+  <a href="{% url 'oz_book_2' %}">2</a>
+  <a href="{% url 'oz_book_1' %}" class="active_butt_pag">1</a>
+
+  <a href="{% url 'oz_book_1' %}">>></a>
+
+
+  </div> 
+
+
+
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+
+    <div class="center">
+
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_01_Cover-1ZGsHQRBT3aMsFQ44MIpB3mdsMbadx.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+    </div>
+
+<div>
+
+  <!--   "Это тайтл, по этому он пустует"       -->
+
+  </div>
+</div>
+   
+
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+
+</div></p>
+
+</div>  
+
+
+
+
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 

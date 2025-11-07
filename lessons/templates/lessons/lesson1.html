@@ -1,0 +1,257 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+
+
+{% block title %}
+
+Урок Первый
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="features">
+  <br>
+    <h1 class="center"> Урок Первый </h1>
+    <br>
+    <div class="main_part_lesson">
+     
+
+      
+
+    <embed  src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/001-ls-44Hd6AD6mlfpmRbCobdsR2QKzXii7p.pdf#toolbar=0&navpanes=0&scrollbar=0" width="1200" height="800" >
+
+      <iframe src="https://drive.google.com/file/d/1tP6avxmqzsOxmO0SsgdC_0v2c0_UX93S/preview#toolbar=0&navpanes=0&scrollbar=0" width="1200" height="800"></iframe>
+        (Если изображение размыто, кликните на +/- и оно станет нормальным)
+          
+        p.s. - тут несколько файлов, чтобы тестировать разные сайты, которые могут их хранить и отправлять на сервер (разное качество)
+
+      <br>
+  <h1 class="center">Тест</h1>
+  
+  <hr width="100%;" color="black" >
+<!--  Система тестов на данный момент чувствительна к регистру, пробелам и т.п.               {% static 'lessons/img/001-ls.pdf' %}  -->
+<p>Выполните задания теста:</p>
+<p>הַטֶּמְפֵּרָטוּרָה עָלְתָה בַּ-58% בְּהַשְׁוָאָה לַשָּׁבוּעַ שֶׁעָבַר</p>
+<p> Температура повысилась на 58% по сравнению с прошлой неделей. </p> <!--  <img src="{% static 'lessons/img/example.png' %}" >   -->   
+<p> <input class="ans_input" type="text" id="z_1"></p>
+<button class ='btn btn-info' onclick="check_answer1('חמישים ושמונה אחוזים', 'id_answ_1');"> Проверить</button>
+<div id="id_answ_1"></div>
+
+  <hr width="100%;" color="black" >
+
+<p>87% מֵהַתַּלְמִידִים עָבְרוּ אֶת הַמִּבְחָן בְּהַצְלָחָה</p>
+<p>87% учеников успешно сдали экзамен.</p>
+<p> <input class="ans_input" type="text" id="z_2"></p>
+<button class ='btn btn-info' onclick="check_answer2('שמונים ושבעה אחוזים', 'id_answ_2');"> Проверить</button>
+<div id="id_answ_2"></div>
+
+<hr width="100%;" color="black" >
+
+<p>99% מֵהַזְּמַן אֲנִי נֶהֱנֶה לִלְמֹד דְּבָרִים חֲדָשִׁים.</p>
+<p>99% времени я наслаждаюсь изучением нового.</p>
+<p> <input class="ans_input" type="text" id="z_3"></p>
+<button class ='btn btn-info' onclick="check_answer3('תשעים ותשעה אחוזים', 'id_answ_3');"> Проверить</button>
+<div id="id_answ_3"></div>
+
+<hr width="100%;" color="black" >
+
+<p>הֲנָחָה שֶׁל 36% עַל כָּל הַפְּרִיטִים בְּמַדָּף הַזֶּה</p>
+<p>Скидка 36% на все товары на этой полке.</p>
+<p> <input class="ans_input" type="text" id="z_4"></p>
+<button class ='btn btn-info' onclick="check_answer4('שלושים ושישה אחוזים', 'id_answ_4');"> Проверить</button>
+<div id="id_answ_4"></div>
+
+<hr width="100%;" color="black" >
+
+<p>הַשְּׁאֵלָה הַזֹּאת הוֹפִיעָה בְּ-45% מֵהַמִּבְחָנִים הַקּוֹדְמִים.</p>
+<p>Этот вопрос появился в 45% предыдущих экзаменов.</p>
+<p> <input class="ans_input" type="text" id="z_5"></p>
+<button class ='btn btn-info' onclick="check_answer5('ארבעים וחמישה אחוזים', 'id_answ_5');"> Проверить</button>
+<div id="id_answ_5"></div>
+
+<hr width="100%;" color="black" >
+
+(запись включаеться не мгновенно из-за технических особенностей сайта)
+<iframe src="https://drive.google.com/file/d/1AWFw9O85RHRBaYOnOwbheNrIkgUooDjG/preview" width="350" height="50" allow="autoplay"></iframe>
+
+
+<br><br>
+<hr width="100%;" color="black" >
+
+<div class="pdf_link">
+
+Если у вас не отображается урок, вы можете скачать его текстовую версию в формате  <a href="https://drive.google.com/file/d/1tP6avxmqzsOxmO0SsgdC_0v2c0_UX93S/preview"> pdf </a>
+</div>
+
+</div>  
+
+
+<!-- {% static 'lessons/img/001-ls.pdf' %}
+
+Ниже машинка проверки ответов по базовым вопросам. В функцию передается правильный ответ и значение из инпута, она возвращает верен ответ или нет. Для экзаменов стоит использовать защищенную конструкцию  -->
+
+
+<script>
+  function check_answer1(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_1').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer2(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_2').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer3(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_3').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer4(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_4').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer5(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_5').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 
+
+
+
+
+
+
+
+
+
+
+<!--
+<hr>
+            Тут будет видео
+     
+ <video width="320" height="240" controls>
+    <source src="" type="video/mp4">
+  </video>
+
+  <script language = 'javascript'>
+    document.write("Hello World");
+</script>
+
+<form class="o2t-styles-form"> <label><p>Введите число</p> <input type="text" pattern="^[0-9]+$" title="Разрешены только числа"> </label></form>
+
+
+  <form class="o2t-styles-form"> <label><p>Напишите проценты (число и слово “процент” в правильной форме) на иврите, без использования никуда.</p> 
+    <input type="text" pattern="22" title=""> </label></form>
+
+<script src="{% static '/lessons/js/.js' %}"></script>
+
+
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <p><label for="id_1">  Text here   <input type="text" id="id_1" name="filled_text"></label> </p>
+  <p><label for="id_2">  checkbox here   <input type="checkbox" id="id_2" name="filled_box"></label></p>
+  <p><label for="id_3">  round here   <input type="radio" id="id_3" name="filled_round"></label></p>
+
+  <p></p><button type="submit">проверить ответы</button></p>
+</form>
+
+  -->
+
+
+
+  <!--   
+
+    <p>Проценты всегда считаются в мужском роде.</p>
+    <br>
+   <p><b> אח ּוִז </b>- процент</p>
+   <p><b> אח ּוִזים </b>- проценты</p>
+   <p>(ударение на последний слог, ахуз или ахузим)</p>
+   
+
+<p>------------------------------------------</p>
+
+  <p>Например</p>
+
+
+  <p><b> ִׁשי ָּׁש ה ָעָׂשר ֲאח ּוִזים </b>- 16%</p>
+  <p><b> ְׁשמֹוִנים ַוֲחִמ ָּׁש ה ֲאח ּוִזים</b>- 85%</p>
+  <p><b> ִׁשי ָּׁש ה ָעָׂשר ֲאח ּוִזים </b>- 62%</p>
+  <p><b> ִׁשי ָּׁש ה ָעָׂשר ֲאח ּוִזים </b>- 146%</p>
+  
+  <p>------------------------------------------</p>
+
+  <img src="{% static 'lessons/img/example.png' %}" >
+
+  <p>------------------------------------------</p>
+ -->
+
+ <!--  <img src="{% static 'lessons/img/example.png' %}" >   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<script>
+  function check_answer(right_answer){
+  user_answer = ''
+  user_answer = document.getElementById('z_1').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById('test_answer').innerHTML = end_answ;}
+  </script>
+
+
+
+  -->

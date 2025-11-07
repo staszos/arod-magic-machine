@@ -1,0 +1,135 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+    
+
+  <div class="arial-text">
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+ 
+
+    
+    <a href="{% url 'oz_book_17' %}"><<</a>
+
+    <a href="{% url 'oz_book_10' %}">10</a>
+    <a href="{% url 'oz_book_9' %}" class="active_butt_pag">9</a>
+    <a href="{% url 'oz_book_8' %}">8</a>
+  
+    <a href="{% url 'oz_book_1' %}">>></a>
+
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+
+
+    <div class="center">   
+
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_09-oN3iyGnM7Lt08LWI8WIKwGmJCC6NAS.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+</div>
+
+
+  
+
+<div class="right" dir="rtl">
+  <b>בַּהֶמְשֵׁךְ</b> השְׁבִיל הלבנים הצהובות, הקבוצה הקטנטנה מצאה איש פח שהיה <b>חָלוּד</b> <b>ונוֹקְשֶׁה</b>. לאחר שדורותי <b>שִׁמֵּנָה</b> את <b>המַרְפְּקִים</b> החלודים, איש הפח הצליח <b>לָנוּעַ</b> <b>בְּחָפְשִׁיּוּת</b>. "אה, תודה, ילדה קטנה. אני מרגיש ממש כמו חדש – רק חבל שעדיין אין לי לב. כשה<b>פַּחָח</b> הכין אותי, הוא <b>שָׁכַח</b> לתת לי אחד".
+  "זה <b>נשמע</b> שאתה גם צריך לראות את הקוסם מארץ עוץ!" קראה דורותי. "בוא איתנו!"
+  
+  <br><br>
+
+  <div class="audio_google_file">
+
+    <audio src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/audio/Voiceover_Oz_09-0eV29AxMUHszdLuqf6LFne9JWtRkD2.m4a" id="audio" controls controlsList="nodownload"> 
+    </audio>
+
+    </div>
+
+  <div class="right">
+    <div class="book_dictionary">
+
+
+  <p><b>בַּהֶמְשֵׁךְ</b> – далее, впоследствии</p>
+  <p><b>לִמְצֹוא</b> – найти, находить</p>
+  <p><b>חָלוּד</b> – ржавый</p>
+  <p><b>נוֹקְשֶׁה</b> – жесткий, твердый</p>
+  <p><b>לְשַׁמֵּן</b> – смазывать (маслом)</p>
+  <p><b>מַרְפֵּק</b> – локоть</p>
+  <br>
+  <p><b>לָנוּעַ</b> – двигаться</p>
+  <p><b>בְּחָפְשִׁיּוּת</b> – свободно</p>
+  <p><b>פַּחָח</b> – жестянщик</p>
+  <p><b>לְהָכִין</b> – готовить, подготовить</p>
+  <p><b>לִשְׁכֹּוחַ</b> – забыть</p>
+  <p><b>נשמע</b> – звучит так, будто</p>
+  
+    </div>
+  </div>
+  
+</div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+   
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+
+</div></p>
+
+</div>  
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 

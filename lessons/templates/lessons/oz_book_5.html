@@ -1,0 +1,135 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+    
+
+  <div class="arial-text">
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+ 
+
+    <a href="{% url 'oz_book_17' %}"><<</a>
+
+    <a href="{% url 'oz_book_6' %}">6</a>
+    <a href="{% url 'oz_book_5' %}" class="active_butt_pag">5</a>
+    <a href="{% url 'oz_book_4' %}">4</a>
+
+  
+    <a href="{% url 'oz_book_1' %}">>></a>
+
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+
+    <div class="center">
+
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_05-li21mAtthe9GQt0hUvkolaKKKNsqWe.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+</div>
+
+
+
+  
+
+<div class="right" dir="rtl">
+
+  <b>קְבוּצָה</b> של אנשים <b>קְטַנְטַנִּים </b>ו<b>מְאוּשָּׁרִים</b> <b>מיהֲרָה</b> אל דורותי.
+  "ברוכים הבאים לעוץ! אנחנו המנצ'קינס, הבית שלך נחת על <b>הַמְּכַשֵּׁפָה הַמְּרוּשַּׁעַת</b> של המִזְרָח. <b>שִׁחְרַרְתְּ</b> אותנו <b>מִכּישּׁוּף הָרָשָׁע</b> שלה <b>לָנֶצַח</b>! תודה, תודה, תודה!"
+  
+  <br><br>
+
+  
+  <div class="audio_google_file">
+
+    <audio src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/audio/Voiceover_Oz_05-QwxNnCE0hGlWGbTRFyhP1HtuvNL26X.m4a" id="audio" controls controlsList="nodownload"> 
+    </audio>
+
+    </div>
+
+  <div class="right">
+
+    <div class="book_dictionary">
+
+  <p><b>קְבוּצָה</b> – группа, команда    </p>
+  <p><b>מְאוּשָׁר</b> – счастливый    </p>
+  <p><b>קְטַנְטַן</b> – крошечный      </p>
+  <p><b>לְמַהֵר אל</b> – торопиться к        </p>
+  <p><b>מְכַשֵּׁפָה</b> – ведьма    </p>
+  <p><b>מְרוּשָּׁע</b> – злой, коварный   </p>
+  <br>
+  <p><b>לְשַׁחְרֵר את</b> – освободить, отпустить</p>
+  <p><b>רָשָׁע</b> – злодей, негодяй</p>
+  <p> <b>כּישּׁוּף</b> – проклятье, заклятье</p>
+  <p><b>נֶצַח</b> – вечность</p>
+  </div>
+</div>
+
+
+</div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+   
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+
+</div></p>
+
+</div>  
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 

@@ -1,0 +1,141 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+ 
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+    
+
+  <div class="arial-text">
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+    <a href="{% url 'oz_book_17' %}"><<</a>
+
+    <a href="{% url 'oz_book_3' %}">3</a>
+    <a href="{% url 'oz_book_2' %}" class="active_butt_pag">2</a>
+    <a href="{% url 'oz_book_1' %}" >1</a>
+
+  
+    <a href="{% url 'oz_book_1' %}">>></a>
+  
+
+
+
+
+
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+
+
+ 
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+<div class="center">
+
+
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_02-yvqPUhOVyNaGsVn0zOqLTypI9W0h02.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+    </div>
+
+  
+
+    <br>
+
+<div class="right" dir="rtl">
+  ב<b>כְּפָר</b> קטן <b>רָחוֹק</b> מכאן גרה ילדה קטנה ו<b><font color="#004aad">שְׁמָהּ</font></b> דורותי. היא גרה בבית <b>עֵץ</b> קטן עם כלב טוטו. דורותי אהבה מאוד את טוטו והם <b>שִׂחֲקוּ</b> <b>אֶחָד עִם הַשְּׁנִיָּה</b> כל הזמן.
+
+  <br>  <br>
+  <div class="audio_google_file">
+  
+<audio src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/audio/Voiceover_Oz_02-GQYUQ0jV48QGQ0RWID4S19xTpKyzow.m4a" id="audio" controls controlsList="nodownload"> 
+</audio>
+</div>
+  
+  <div class="right">
+    <div class="book_dictionary">
+
+  
+  <p><b>רָחוֹק</b> – далеко </p>      <!--   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    -->
+  <p><b>כְּפָר</b> – деревня </p>
+  <p><b>עֵץ</b> – дерево</p>
+  <br>
+
+  <p><b>לְשַׂחֵק</b> – играть</p>
+  <p><b>אֶחָד עִם הַשְּׁנִיָּה</b> – друг с другом</p>
+
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+
+</div></p>
+
+</div>  
+
+
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 
+
+
+
+
+
+
+

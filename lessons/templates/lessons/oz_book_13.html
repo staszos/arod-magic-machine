@@ -1,0 +1,134 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+    
+
+  <div class="arial-text">
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+
+
+    <a href="{% url 'oz_book_17' %}"><<</a>
+    
+    <a href="{% url 'oz_book_14' %}">14</a>
+    <a href="{% url 'oz_book_13' %}" class="active_butt_pag">13</a>
+    <a href="{% url 'oz_book_12' %}">12</a>
+
+    <a href="{% url 'oz_book_1' %}">>></a>
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+
+
+    <div class="center">  
+
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_13-vjSK029updI2v7S3WkyJAYNCpOAzNd.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+</div>
+
+
+
+  
+
+<div class="right" dir="rtl">
+  
+  "לאחר מכן <b>עֲנָן</b> שחור של<b> צִפּוֹרֵי בַּר</b> <b>הִחְשִׁיךְ</b> את השמים." <b>עוֹרְבִים</b>!" צעק הדחליל, "זו <b>הַמּוּמְחִיּוּת</b> שלי!" הוא נופף בזרועותיו בהתרגשות. "בו! לך מפה! קישטא!"
+  "הצלת אותנו, דחליל," נאנחה דורותי. " תודה."
+  המכשפה <b>כָּעֲסָה</b>! היא שלחה את ה<b>קוֹפִים</b> ה<b>מְעוֹפְפִים</b> שלה לתפוס את הקבוצה הקטנה. הקוֹפִים המְעוֹפְפִים עפו למטה, תפסו את דורותי ו<b><font color="#004aad">חֲבֵרֶיהָ</font></b> וטסו חזרה <b><font color="#004aad">לְטִירָתָהּ</font></b> של המכשפה הרעה.
+  
+  <br><br>
+
+  <div class="audio_google_file">
+
+
+    <audio src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/audio/Voiceover_Oz_13-1GSdlY6HeETkv6VqPkvZjEz0nrjhRK.m4a" id="audio" controls controlsList="nodownload"> 
+    </audio>
+    </div>
+
+  <div class="right">
+    <div class="book_dictionary">
+
+
+  <p><b>עֲנָן</b> – облако</p>
+  <p><b>צִפּוֹרֵי בַּר</b> – дикие птицы</p>
+  <p><b>לְהַחְשִׁיךְ</b> – темнеть, затемнять</p>
+  <p><b>עוֹרֵב</b> – ворон</p>
+  <p><b>מּוּמְחִיּוּת</b> – мастерство, специализация</p>
+  <br>
+  <p><b>לְהוֹפֵף</b> – кружить вокруг</p>
+  <p><b>קוֹף</b> – обезьяна</p>
+  <p><b>לִכְעֹוס</b> – сердиться</p>
+  <p><b>מְעוֹפֵף</b> – летающий</p>
+  <p><b>טִירָה</b> – замок, крепость</p>
+  
+    </div>
+  </div>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+   
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+
+</div></p>
+
+</div>  
+
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 

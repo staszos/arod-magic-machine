@@ -1,0 +1,305 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+
+
+{% block title %}
+
+Урок Первый
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="features">
+  <br>
+    <h1 class="center"> Урок Второй </h1>
+    <br>
+    
+    
+<style>  
+  .pagination a {
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+      padding: 8px 16px;
+      transition: 0.4s;
+      border-radius: 30%;
+      text-align: center;
+
+      margin-left : auto;
+      margin-right: auto;
+
+    font: 32px Arial, sans-serif;
+  
+  }               
+  
+  .pagination a.active_butt_pag {
+  
+      background: yellow;
+  
+  
+  }
+  
+  .pagination a:hover:not(.active_butt_pag) {
+      background: gray;
+  }           
+  </style>
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+  <a href="#">17</a>
+  <a href="#">16</a>
+  <a href="#">15</a>
+  <a href="#">14</a>
+  <a href="#">13</a>
+  <a href="#">12</a>
+  <a href="#">11</a>
+  <a href="#">10</a>
+  <a href="#">9</a>
+  <a href="#">8</a>
+  <a href="#">7</a>
+  <a href="#">6</a>
+  <a href="#">5</a>
+  <a href="#">4</a>
+  <a href="#">3</a>
+  <a href="#">2</a>
+  <a href="#" class="active_butt_pag">1</a>
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+    
+    
+    <div class="main_part_lesson">
+     
+      
+      <frame>
+
+<div class="right">
+
+  <p><b>רָחוֹק</b> – далеко</p>
+  <p><b>כְּפָר</b> – деревня</p>
+  <p><b>עֵץ</b> – дерево</p>
+  
+  <br>
+  
+  <p><b>לְשַׂחֵק</b> – играть</p>
+  <p><b>אֶחָד עִם הַשְּׁנִיָּה</b> – друг с другом</p>
+  
+  <p><b>בכְּפָר</b> קטן<b> רָחוֹק</b> מכאן גרה ילדה קטנה <b> <font color="#004aad">  (ושמה) </font>  </b>דורותי</p>
+  
+  </div>
+</frame>
+
+
+      <iframe class="center" src="https://drive.google.com/file/d/1PBthb-c3ofnlUWbq18hjco1DvDDjKQjd/preview" width="1200" height="800" allow="autoplay"></iframe>
+
+        (Если изображение размыто, кликните на +/- и оно станет нормальным)
+          
+
+        
+      <br>
+
+      (аудио-запись включаеться не мгновенно из-за технических особенностей сайта)<br>
+      <iframe class="center"  src="https://drive.google.com/file/d/1AWFw9O85RHRBaYOnOwbheNrIkgUooDjG/preview" width="350" height="50" allow="autoplay"></iframe>
+ 
+      <iframe class="center" src="https://drive.google.com/file/d/1CyWaMyXl2xfk206H0FgTEYOHc1v48AaG/preview" width="1200" height="800" allow="autoplay"></iframe>
+
+      <p>Тут может быть тест или различные пояснения к странице</p>
+
+      <br>
+      <iframe class="center"  src="https://drive.google.com/file/d/1cnCxorJBCmz1mR23xPWxCe0y-JbyR38Q/preview" width="350" height="50" allow="autoplay"></iframe>
+ 
+      <iframe class="center" src="https://drive.google.com/file/d/1Jw0LJ0Evfg_hFn0ApDH4ZW0goP_rlU_P/preview" width="1200" height="800" allow="autoplay"></iframe>
+
+      
+
+   
+
+
+
+<div class="arial-text">
+
+  <p>Тут должен работать Ариал (на русский и Иврит ниже). English for example.</p>
+  <p>הַטֶּמְפֵּרָטוּרָה עָלְתָה בַּ-58% בְּהַשְׁוָאָה לַשָּׁבוּעַ שֶׁעָבַר</p>
+
+</div>
+
+
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+Если у вас не отображается урок, вы можете скачать его текстовую версию в формате  <a href=""> pdf </a>
+
+</div></p>
+
+</div>  
+
+
+
+<script>
+  function check_answer1(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_1').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer2(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_2').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer3(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_3').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer4(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_4').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+<script>
+  function check_answer5(right_answer,id_answ){
+  user_answer = ''
+  user_answer = document.getElementById('z_5').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById(id_answ).innerHTML = end_answ;}
+  </script>
+
+
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 
+
+
+
+
+
+
+
+
+
+
+<!--
+<hr>
+            Тут будет видео
+     
+ <video width="320" height="240" controls>
+    <source src="" type="video/mp4">
+  </video>
+
+  <script language = 'javascript'>
+    document.write("Hello World");
+</script>
+
+<form class="o2t-styles-form"> <label><p>Введите число</p> <input type="text" pattern="^[0-9]+$" title="Разрешены только числа"> </label></form>
+
+
+  <form class="o2t-styles-form"> <label><p>Напишите проценты (число и слово “процент” в правильной форме) на иврите, без использования никуда.</p> 
+    <input type="text" pattern="22" title=""> </label></form>
+
+<script src="{% static '/lessons/js/.js' %}"></script>
+
+
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <p><label for="id_1">  Text here   <input type="text" id="id_1" name="filled_text"></label> </p>
+  <p><label for="id_2">  checkbox here   <input type="checkbox" id="id_2" name="filled_box"></label></p>
+  <p><label for="id_3">  round here   <input type="radio" id="id_3" name="filled_round"></label></p>
+
+  <p></p><button type="submit">проверить ответы</button></p>
+</form>
+
+  -->
+
+
+
+  <!--   
+
+    <p>Проценты всегда считаются в мужском роде.</p>
+    <br>
+   <p><b> אח ּוִז </b>- процент</p>
+   <p><b> אח ּוִזים </b>- проценты</p>
+   <p>(ударение на последний слог, ахуз или ахузим)</p>
+   
+
+<p>------------------------------------------</p>
+
+  <p>Например</p>
+
+
+  <p><b> ִׁשי ָּׁש ה ָעָׂשר ֲאח ּוִזים </b>- 16%</p>
+  <p><b> ְׁשמֹוִנים ַוֲחִמ ָּׁש ה ֲאח ּוִזים</b>- 85%</p>
+  <p><b> ִׁשי ָּׁש ה ָעָׂשר ֲאח ּוִזים </b>- 62%</p>
+  <p><b> ִׁשי ָּׁש ה ָעָׂשר ֲאח ּוִזים </b>- 146%</p>
+  
+  <p>------------------------------------------</p>
+
+  <img src="{% static 'lessons/img/example.png' %}" >
+
+  <p>------------------------------------------</p>
+ -->
+
+ <!--  <img src="{% static 'lessons/img/example.png' %}" >   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<script>
+  function check_answer(right_answer){
+  user_answer = ''
+  user_answer = document.getElementById('z_1').value;
+  if(user_answer == right_answer)
+  {end_answ = 'Ваш ответ верен!'}
+  else{end_answ = ('Верный ответ: '+right_answer)}
+  document.getElementById('test_answer').innerHTML = end_answ;}
+  </script>
+
+
+
+  -->

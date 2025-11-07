@@ -1,0 +1,138 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+    
+
+  <div class="arial-text">
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+
+
+     
+    <a href="{% url 'oz_book_17' %}"><<</a>
+
+    <a href="{% url 'oz_book_11' %}">11</a>
+    <a href="{% url 'oz_book_10' %}" class="active_butt_pag">10</a>
+    <a href="{% url 'oz_book_9' %}">9</a>
+  
+    <a href="{% url 'oz_book_1' %}">>></a>
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+
+
+
+    <div class="center">   
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_10-1Q3NQZtB8oYAO8Ffxr9W8teNpWbAM9.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+
+</div>
+
+  
+
+<div class="right" dir="rtl">
+  הם הלכו דרך ה<b>יָעַר</b>, פתאום אריה גדול <b>קָפַץ</b> אל טוטו <b>ושָׁאַג</b>! "שלא <b>תָּעֵז</b> <b>לִנְשֹׁוךְ</b> את טוטו!" קראה דורותי.
+  האריה <b>מצמץ</b> ב<b>דִּמְעָה</b> ואז <b>גִּירֵּד</b> בראשו <b>בְּמְבוּכָה</b>.
+  דורותי הייתה <b>הָמוּמָה</b>." אתה אריה <b>פַּחְדָן</b>!"
+  "אני יודע," לחש האריה. "אני רוצה לקבל אומץ."
+  "הקוסם מארץ עוץ הולך לתת לדחליל מוח ולי לב", אמר איש הפח, "אולי הוא יכול לעזור גם לך!"
+  
+  <br><br>
+
+  <div class="audio_google_file">
+
+    <audio src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/audio/Voiceover_Oz_10-B4z9Usi3LQI3UPYvcXiPY5l7bxZsqm.m4a" id="audio" controls controlsList="nodownload"> 
+    </audio>
+    </div>
+
+  <div class="right">
+
+    <div class="book_dictionary">
+
+
+  <p><b>יָעַר</b> – лес</p>
+  <p><b>לִקְפּוֹץ</b> – прыгать, скакать</p>
+  <p><b>אַרְיֵה</b> – лев</p>
+  <p><b>לִשְׁאֹוג</b> – рычать</p>
+  <p><b>לְהָעִיז</b> – осмелиться, отважиться</p>
+  <p><b>לִנְשֹׁוךְ</b> – кусать</p>
+  <p><b>לִצְעֹוק</b> – кричать</p>
+  <p><b>לִמְצַמֵּץ</b> – моргать</p>
+  <br>
+  <p><b>בְּמְבוּכָה</b> – смущённо</p>
+  <p><b>לְגָרֵד</b> – чесать, царапать</p>
+  <p><b>דִּמְעָה</b> – слеза</p>
+  <p><b>הָמוּם</b> – ошеломленный</p>
+  <p><b>פַּחְדָן</b> – трус</p>
+  <p><b>לִלְחֹושׁ</b> – шептать</p>
+  
+  </div>
+  </div>
+  
+</div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+   
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+</div></p>
+
+</div>  
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 

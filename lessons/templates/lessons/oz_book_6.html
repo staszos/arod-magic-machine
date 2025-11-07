@@ -1,0 +1,123 @@
+{% extends 'lessons/layout.html'%}
+{% load static %} 
+{% load group_tags %}
+
+
+{% block title %}
+
+הקוסם מארץ עוץ 
+
+{% endblock %} 
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+
+
+
+<div class="features">
+  <br>
+    <h1 class="center"> הקוסם מארץ עוץ  </h1>
+    <br>
+    
+    
+
+  <div class="arial-text">
+  <div class="pagination"> <!--<a href="#">&NestedLessLess;</a> -->
+  
+
+
+
+    <a href="{% url 'oz_book_17' %}"><<</a>
+
+    <a href="{% url 'oz_book_7' %}">7</a>             
+    <a href="{% url 'oz_book_6' %}" class="active_butt_pag">6</a>
+    <a href="{% url 'oz_book_5' %}">5</a>
+  
+    <a href="{% url 'oz_book_1' %}">>></a>
+
+  </div> <!--   <a href="#">&NestedGreaterGreater;</a>       -->
+  <hr width="100%;" color="black" >
+  <div class="main_part_lesson">
+
+    <div class="center">
+    <div style="position: relative; display: inline-block;">
+      <img src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/Oz_Pics_06-AzTGA9MpQpiGRlTKoqCDs7IMYcWrLg.png" alt="Защищенное изображение">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent;"></div>
+  </div>
+</div>
+
+
+  
+
+<div class="right" dir="rtl">
+  עוד מכשפה אחת <b>הוֹפִיעָה</b>, אבל זו הייתה המכשפה הטובה של הצָפוֹן.
+  "דורותי, היית מאוד <b>אַמִּיצָה לְשַׁחְרֵר</b> את המנצ'קינס. האם יש משהו שאני יכולה <b>לְהַעֲנִיק</b> לך? פשוט תבקשי".
+  
+  <br><br>
+
+  <div class="audio_google_file">
+
+
+    <audio src="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/oz-book/audio/Voiceover_Oz_06-ZqXVG3m9nGrsg1UZWYgWR7VRDzopEq.m4a" id="audio" controls controlsList="nodownload"> 
+    </audio>
+   
+    </div>
+
+  <div class="right">
+
+    <div class="book_dictionary">
+
+  <p><b>לְהוֹפִיעַ</b> – появляться, выступать</p>
+  <p><b>אַמִּיץ</b> – смелый, храбрый</p>
+  <p><b>לְהַעֲנִיק</b> – дарить, предоставлять, вручать</p>
+  </div>
+</div>
+  
+</div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+   
+
+<br><br>
+<hr width="100%;" color="black" >
+
+
+<p>
+
+<div class="pdf_link">
+
+  Если у вас не отображается книга, Пожалуйста сообщите об этом!
+
+</div></p>
+
+</div>  
+
+{% else %}
+<p>К сожалению эта книга вам не доступна, если вы уже оплатили ее, Пожалуйста сообщите нам об этом.</p>
+{% endif %}
+
+{% else %}
+
+Вы не вошли в ваш аккаунт. Войдите Пожалуйста.
+
+{% endif %}
+
+
+{% endblock %} 

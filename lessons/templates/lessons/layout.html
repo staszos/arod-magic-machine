@@ -1,0 +1,215 @@
+{% load static %} 
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Font awesome icons      {% static 'lessons/css/main.css' %}   https://staszos.github.io/ivrit_project/css/main.css          -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <link href="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/main-RVUQphNQVaiNigHQ0xTvUy6Q3twCOo.css" rel="stylesheet">
+
+  <link rel="shortcut icon" type="img/ico" href="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/favicon-NLH5JIKbxMBjMhHWfqY0zjlbyvAaEy.ico" >
+  
+  
+  
+  
+    <title>{% block title %} {% endblock %} </title>
+</head>
+<body>
+  <style>  
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /*  Or flex-start, space-around, space-between, etc. to control alignment */
+  gap: 5px; /* Adjust the space between the buttons as needed */
+  width: 100%; /*  Important:  The pagination div needs a width to wrap properly. You might want max-width instead. */
+  /* Add max-width here or on parent to keep from overflowing */
+  max-width: 1000px; /* example value */
+  margin: 0 auto; /* example value */
+}
+
+.pagination a {
+  /* Add styling to your links here, e.g., padding, border, etc. */
+  display: inline-block; /* Necessary if you add padding, borders, etc. */
+  padding: 5px 10px;
+
+  text-decoration: none; /* Remove underlines */
+  color: #333;
+
+  border-radius: 35%;
+  font: 32px Arial, sans-serif;
+}
+
+.pagination a.active_butt_pag {
+  background: yellow;
+}
+
+
+.audio_google_file{
+  text-align: center;
+
+}
+
+.center{
+  text-align: center;
+
+}
+
+.right {
+ 
+  text-align: right;
+}
+
+.book_dictionary {
+
+  font-size: 14px;
+
+
+}
+
+.table_dictionary_class {
+  
+    border: 2px solid black;
+    padding: 3px 7px;
+    border-radius: 5px;  
+    font-size: 14px;
+}
+    
+
+.pagination a:hover:not(.active_butt_pag) {
+        background: gray;
+    } 
+    
+img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    }
+
+.main_part_lesson{
+
+    font-size: 22px;
+}
+
+
+
+
+.movie-bg {
+    
+    width: 750px;
+}
+
+
+
+
+
+.correct {
+    border: 2px solid green;
+}
+.incorrect {
+    border: 2px solid red;
+}     
+
+div.pdf {
+   
+   top: -42px;
+   left: 0;
+   width:1200; height:800;
+
+   }
+
+div.pdf_link{
+
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+
+.ans_input{
+
+    border-radius: 10px;
+}
+
+
+    </style>
+  <div class="container p-3 my-3">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-md navbar-light " style="background-color: #f0f5f5">
+          <a href="/" class="navbar-brand">Home</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                  {% if user.is_authenticated %}
+                    <a href="{% url 'users-profile' %}" class="nav-item nav-link">Profile</a>
+                    
+                  
+
+
+
+
+                  
+
+
+
+
+
+
+
+
+                  
+
+                </div>
+            </div>
+        </nav>
+
+
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </div>
+
+
+  {% endif %}
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- A plugin for password show/hide  -->
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+</body>
+</html>
