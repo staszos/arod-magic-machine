@@ -94,6 +94,20 @@ WSGI_APPLICATION = 'user_management.wsgi.application'
 
 
 
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql',
+         'NAME': 'postgres',
+         'USER': 'postgres.ihyqbcghgvniksvjqccj',
+         'PASSWORD': '5utaI08him0lyex3',
+         'HOST': 'db.vdfaaulvccsfiatlrzqs.supabase.co',
+         'PORT': '5432',
+     }
+ }
+
+
+
+"""
 
 DATABASES = {
     'default': {
@@ -112,7 +126,7 @@ DATABASES = {
 
 
 
-"""
+
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
