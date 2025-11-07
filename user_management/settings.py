@@ -92,6 +92,27 @@ WSGI_APPLICATION = 'user_management.wsgi.application'
 
 
 
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'neondb',  # из URL
+        'USER': 'neondb_owner',  # из URL
+        'PASSWORD': 'npg_BmS9Ut8Pwxdj',  # из URL
+        'HOST': 'ep-mute-dust-agolbasw-pooler.c-2.eu-central-1.aws.neon.tech',  # из URL
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+        'DISABLE_SERVER_SIDE_CURSORS': True,
+    }
+}
+
+
+
+"""
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
@@ -107,7 +128,6 @@ DATABASES = {
   }
 }
 
-"""
 
 DATABASES = {
      'default': {
