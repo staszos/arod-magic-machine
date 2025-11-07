@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production! (False - перед выпуском)
-DEBUG = False 
+DEBUG = True 
 # ['*']
 ALLOWED_HOSTS = ['*'] # https://ivri.me/
 
@@ -89,8 +89,6 @@ WSGI_APPLICATION = 'user_management.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-
 
 
 
