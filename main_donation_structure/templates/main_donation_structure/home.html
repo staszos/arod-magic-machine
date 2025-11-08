@@ -1,0 +1,108 @@
+{% extends "users/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+{% load group_tags %}
+
+<style>
+.limiter {
+    
+    hyphens: auto;
+    word-break: break-all;
+    padding: 5px;
+}
+</style>            <!-- Выдает Имя пользователя   {{user.first_name.title|default:''}}     -->
+
+
+
+
+
+
+<div class="limiter">
+    <div class="jumbotron">
+        <h1 class="display-5">        Королевства Ародов          </h1>
+        {% if user.is_authenticated %}
+
+        <p class="lead">
+            Вы вошли в аккаунт! 
+        </p>
+ 
+
+        <p>Ниже приведен список всех уроков</p> 
+
+
+        {% if user|in_group:"Test_group" %}
+
+        <a href="{% url 'lesson1' %}"><button class ='btn btn-info'>Первый Урок</button></a>
+        <a href="{% url 'lesson2' %}"><button class ='btn btn-info'>Второй Урок</button></a>
+        <a href="{% url 'lesson1' %}"><button class ='btn btn-info'>Третий Урок</button></a>
+        <a href="{% url 'lesson1' %}"><button class ='btn btn-info'>Четвертый Урок</button></a>
+        {% endif %}
+        <br><br>
+
+
+        {% if user|in_group:"book_1_(הקוסם מארץ עוץ)" %}
+       
+        <a href="{% url 'oz_book_1' %}"><button class ='btn btn-success'>הקוסם מארץ עוץ </button></a>
+        {% else %}
+        <a href="{% url 'oz_book_1' %}"><button class ='btn btn-danger'>הקוסם מארץ עוץ </button></a>
+        {% endif %}
+        
+
+
+        {% else %}
+
+
+
+
+
+
+        
+        <p class="lead">
+            Добро пожаловать в очень страшное место!
+
+        </p>
+
+
+       <p>
+            МИни текст
+
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Текст</a>
+    
+
+    </p>
+
+
+
+
+
+        {% endif %}
+        <hr class="my-4">
+        <p class="lead">
+            {% if user.is_authenticated %}
+
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary btn-lg">Выйти</button>
+            </form>
+
+          
+
+            {% else %}
+            <!--
+                <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Войти</a>
+                <a class="btn btn-primary btn-lg" href="{% url 'users-register' %}" role="button">Регистрация</a> -->
+    
+            {% endif %}
+            
+        </p>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+
+
+
+
+

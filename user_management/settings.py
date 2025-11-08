@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'users.apps.UserConfig',
     'social_django',
     
-
+    'main_donation_structure',
     'lessons',
 ]
 
@@ -92,11 +92,18 @@ WSGI_APPLICATION = 'user_management.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 
 
 
+"""
 
 DATABASES = {
      'default': {
@@ -109,15 +116,8 @@ DATABASES = {
      }
  }
 
-"""
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 
