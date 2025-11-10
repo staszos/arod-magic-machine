@@ -13,7 +13,15 @@ def main_donation_structure(request):
 def arod_main_FAQ(request):
     return render(request, 'main_donation_structure/arod_main_FAQ.html')
 
+def arod_main_role_tariff(request):
+    return render(request, 'main_donation_structure/arod_main_role_tariff.html')
+
+
 
 def GetInputValue(request):
   input_value = request.POST['quantity']
   return HttpResponse(input_value)
+
+
+
+  
