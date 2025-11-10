@@ -10,7 +10,8 @@ def layout(request):
 
 def main_donation_structure(request):
     return render(request, 'main_donation_structure/main_text.html')
-
+def arod_main_FAQ(request):
+    return render(request, 'main_donation_structure/arod_main_FAQ.html')
 
 
 def GetInputValue(request):

@@ -20,6 +20,9 @@ def home(request):
 def main_text(request):
     return render(request, 'users/main_text.html')
 
+def main_FAQ_adv(request):
+    return render(request, 'users/main_FAQ_adv.html')
+
 
 
 class RegisterView(View):
