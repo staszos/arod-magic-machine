@@ -4,12 +4,7 @@
 {% load group_tags %}
 
 <style>
-.limiter {
-    
-    hyphens: auto;
-    word-break: break-all;
-    padding: 5px;
-}
+
 </style>            <!-- Выдает Имя пользователя   {{user.first_name.title|default:''}}     -->
 
 
@@ -28,7 +23,6 @@
         {% else %}
        <!-- Вы не вошли в аккаунт! -->
         {% endif %}
-        <hr class="my-4">
         <p class="lead">
 
 
@@ -36,18 +30,47 @@
             Добро пожаловать в очень страшное место! <!-- На этом сайте вы сможете узнать актуальную информацию о Королевствах Арода, посмотреть общую базу знаний и, конечно же, поддаться на соблазнительные рекламные предложения.
         --> </p>
 
+<hr class="my-4">
+
+<h2 class="display-5">      Платные Услуги       </h2>
+       
        <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Донат</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Предметы</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Расы</a>
+         
+         <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Прочие услуги</a>
     </p>
+
+<hr class="my-4">
+<h2 class="display-5">      Публичная Вики Королевств Арода       </h2>
+
       <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Общая Вики</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Расы</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Города</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Культуры</a>
+      </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Магия 9 кругов</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Стихийная Магия</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Некромантия</a>
     </p>
-          <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Игрокам</a>
+       
+
+    
+    
+    <!--<p>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Персонажи игроков</a>  
+    </p>-->
+   
+
+
+<hr class="my-4">
+<h2 class="display-5">      Прочая Информация       </h2>
+   <p>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Общая информация</a>
     </p>
-      <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Прочие услуги</a>
-    </p>
+
+
 
             {% if user.is_authenticated %}
             <form action="{% url 'logout' %}" method="post">
@@ -64,8 +87,11 @@
 
 
         </p>
-    </div>
 
+
+
+
+</div>
 </div>
 
 {% endblock content %}
