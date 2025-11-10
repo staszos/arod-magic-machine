@@ -1,5 +1,5 @@
 {% extends "users/base.html" %}
-{% block title %} Home Page {% endblock title%}
+{% block title %} Ароды {% endblock title%}
 {% block content %}
 {% load group_tags %}
 
@@ -8,13 +8,13 @@
 </style>            <!-- Выдает Имя пользователя   {{user.first_name.title|default:''}}     -->
 
 
-
+<!--  url 'main_donation_structure'    - основная папка сайта с королевствами Арода  -->
 
 
 
 <div class="limiter">
     <div class="jumbotron">
-        <h1 class="display-5">      Королевства Ародов       </h1>
+        <h1 class="display-5">      Главная Страница       </h1>
         {% if user.is_authenticated %}
         <!-- <p class="lead">
            Вы вошли в аккаунт!  
@@ -32,30 +32,35 @@
 
 <hr class="my-4">
 
+<h2 class="display-5">      Новости       </h2>
+
+<p> Новостей пока нет. </p>
+
+<hr class="my-4">
+
 <h2 class="display-5">      Платные Услуги       </h2>
        
        <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Предметы</a>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Расы</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Предметы</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Расы</a>
          
-         <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Прочие услуги</a>
+         <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Прочие услуги</a>
     </p>
 
 <hr class="my-4">
 <h2 class="display-5">      Публичная Вики Королевств Арода       </h2>
 
       <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Расы</a>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Города</a>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Культуры</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Расы</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Города</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Культуры</a>
       </p>
     <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Магия 9 кругов</a>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Стихийная Магия</a>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Некромантия</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Магия 9 кругов</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Стихийная Магия</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Некромантия</a>
     </p>
        
-
 
 
 
@@ -89,7 +94,7 @@
 <hr class="my-4">
 <h2 class="display-5">      Прочая Информация       </h2>
    <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'main_text' %}" role="button">Общая информация</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'main_donation_structure' %}" role="button">Общая информация</a>
     </p>
 
 

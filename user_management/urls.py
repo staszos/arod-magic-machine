@@ -37,6 +37,8 @@ urlpatterns = [
 
      path('lessons/', include("lessons.urls")   ),
 
+     path('main_donation_structure/', include("main_donation_structure.urls")   ),
+
     re_path(r'^oauth/', include('social_django.urls', namespace='social')),
 
 

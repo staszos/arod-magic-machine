@@ -11,7 +11,15 @@
     <!--Font awesome icons -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="shortcut icon" type="img/ico" href="https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/favicon-NLH5JIKbxMBjMhHWfqY0zjlbyvAaEy.ico" >
-    <title>{% block title %} {% endblock %} </title>
+  
+  <!-- -->
+ 
+
+
+
+ 
+  
+  <title>{% block title %} {% endblock %} </title>
 </head>
 <body>
 
@@ -99,11 +107,62 @@ div.pdf_link{
   flex: 1; /* текст занимает оставшееся пространство */
 }
 
+@font-face {
+  font-family: 'Actinia'; /* Имя, под которым шрифт будет доступен в CSS       <!-- Шрифт взят у Black Fox   --> */
+  src: url('https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/Arod/Metamorphous.ttf') format('woff2'),
+       url('https://oeycfg7fhavle8jh.public.blob.vercel-storage.com/Arod/Metamorphous.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+ 
+}
 
 
+.arod-btn{
+  background-color: #7d4edb; /* мягкий сиренево‑фиолетовый */
+  /* остальные стили (padding, border-radius и т.д.) — как в предыдущем примере */
+  
+  /* Оформление кнопки */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px; /* скруглённые углы */
+  text-decoration: none; /* убрать подчёркивание */
+  font-family: 'Actinia', sans-serif;     /* Шрифт взят у Black Fox */
 
+  font-weight: 700;
+ 
+  letter-spacing: 0.5px;
+  
+  /* Тень для объёма */
+  box-shadow: 0 2px 4px rgba(123, 94, 201, 0.3);
+  
+  /* Плавный переход при наведении */
+  transition: all 0.3s ease;
+}
 
+.arod-btn:hover {
+  background-color: #6a4ec0; /* чуть темнее при наведении */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(106, 78, 192, 0.4);
+}
 
+.arod-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.arod-main-text {
+color: #c9c60f; 
+
+}
+
+.bigfont-size {
+font-size: 24px;
+}
+
+.upmargin {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
     </style>
 
 
@@ -118,7 +177,15 @@ div.pdf_link{
     <div class="row">
       <div class="col-md-12">
         <nav class="navbar navbar-expand-md navbar-light " style="background-color: #f0f5f5">
-          <a href="/" class="navbar-brand"> Королевства Ародов </a>
+
+        <div class="center ">
+
+          <a href="/" class="navbar-brand arod-btn"> <div class="arod-main-text bigfont-size" >Королевства Ародов </div></a> 
+          <a href="/" class="navbar-brand arod-btn" > <div class="bigfont-size"> (Тут может быть ваша ролка) </div> </a>
+            
+        </div>
+
+
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
